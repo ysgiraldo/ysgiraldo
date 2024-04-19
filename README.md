@@ -55,7 +55,4 @@
       <a href="https://twitter.com/SofiaGiraldoC" target="blank"><img align="center"
          src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"
          alt="azzar" height="30"/></a>
-      <a href="https://www.instagram.com/sofiagiraldoc/?hl=es-la" target="blank"><img align="center"
-         src="https://img.shields.io/badge/instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white"
-         alt="azzar" height="30"/></a>
 </p>
