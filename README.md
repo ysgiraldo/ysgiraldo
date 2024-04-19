@@ -1,6 +1,6 @@
 <h1 align="center">Hello! I am Sofía Giraldo 👋</h1>
 
-<h2 align="center">Data Scientist and Backend developer</h2>
+<h2 align="left">Data Scientist and Backend developer</h2>
 
 
 ## About me
@@ -44,7 +44,7 @@
 
 ## Contact me! 📞
 
-<p align="center">
+<p align="left">
       <br/>
       <a href="https://www.linkedin.com/in/yackelin-sof%C3%ADa-giraldo-casta%C3%B1o/" target="blank"><img align="center"
          src="https://img.shields.io/badge/linkedin-%231DA1F2.svg?style=for-the-badge&logo=linkedin&logoColor=white"
