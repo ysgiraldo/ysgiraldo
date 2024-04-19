@@ -11,6 +11,8 @@
 
 - 📚 Focusing mainly on data science, but also have knowledge on back-end and front-end development.
 
+- 👨‍💻 Here's my [CV](https://github.com/ysgiraldo/ysgiraldo/blob/main/CV-Sofia-Giraldo.pdf)
+
 
 ## Main Tools 🧰
 
