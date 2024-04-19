@@ -25,7 +25,6 @@
 
     ![Django REST Framework](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
     ![Dash](https://img.shields.io/badge/Dash-0080FF?style=for-the-badge&logo=dash&logoColor=white)
-    ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
 - **Cloud**:
 
