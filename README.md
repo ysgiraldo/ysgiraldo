@@ -1,6 +1,6 @@
 <h1 align="center">Hello! I am Sofía Giraldo 👋</h1>
 
-<h2 align="left">Data Scientist</h2>
+<h2 align="center">Data Scientist</h2>
 
 
 ## About me
