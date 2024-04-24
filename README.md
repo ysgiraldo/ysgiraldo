@@ -1,6 +1,6 @@
 <h1 align="center">Hello! I am Sofía Giraldo 👋</h1>
 
-<h2 align="left">Data Scientist and Backend developer</h2>
+<h2 align="left">Data Scientist</h2>
 
 
 ## About me
@@ -9,7 +9,7 @@
 
 - 🌎 Currently living in Medellín, Colombia
 
-- 📚 Focusing mainly on data science, but also have knowledge on back-end and front-end development.
+- 📚 Focusing mainly on analytics, but also have knowledge on back-end and front-end development.
 
 - 👨‍💻 Here's my [CV](https://github.com/ysgiraldo/ysgiraldo/blob/main/CV-Sofia-Giraldo.pdf)
 
