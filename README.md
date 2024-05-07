@@ -19,11 +19,13 @@
 - **Programming languages**:
 
     ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+    ![Scala](https://img.shields.io/badge/Scala-DC322F?style=for-the-badge&logo=scala&logoColor=white)
 
 - **Frameworks**:
 
     ![Django REST Framework](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
     ![Dash](https://img.shields.io/badge/Dash-0080FF?style=for-the-badge&logo=dash&logoColor=white)
+    ![Spark](https://img.shields.io/badge/Spark-E25A1C?style=for-the-badge&logo=Apache-Spark&logoColor=white)
 
 - **Cloud**:
 
