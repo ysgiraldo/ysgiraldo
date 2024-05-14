@@ -5,7 +5,7 @@
 
 ## About me
 
-- 🎓 I am Economist from Universidad de Medellín and at the moment Analytics student at Universidad Nacional.
+- 🎓 I am Economist from Universidad de Medellín and Analytics student at Universidad Nacional.
 
 - 🌎 Currently living in Medellín, Colombia
 
