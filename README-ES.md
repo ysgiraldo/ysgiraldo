@@ -1,19 +1,19 @@
-<h1 align="center">Hello! I am Sofía Giraldo 👋</h1>
+<h1 align="center">¡Hola! Soy Sofía Giraldo👋</h1>
 
-<h2 align="left">Data Scientist and Backend developer</h2>
+<h2 align="center">Científica de datos y Desarrolladora web</h2>
 
 
-## About me
+## Sobre mí
 
-- 🎓 I am Economist from Universidad de Medellín and at the moment Analytics student at Universidad Nacional.
+- 🎓 Soy Economista y actualmente estudiante de la especialización en Analítica en la Universidad Nacional de Colombia
 
-- 🌎 Currently living in Medellín, Colombia
+- 🌎 Vivo en Medellín, Colombia
 
 - 📚 Focusing mainly on data science, but also have knowledge on back-end and front-end development.
 
-## Main Tools 🧰
+## Principales Habilidades 🧰
 
-- **Programming languages**:
+- **Lenguajes de programación**:
 
     ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
     ![Java Script](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
@@ -23,24 +23,25 @@
     ![Django REST Framework](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
     ![Dash](https://img.shields.io/badge/Dash-0080FF?style=for-the-badge&logo=dash&logoColor=white)
 
-- **Cloud**:
+- **Nube**:
 
     ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white&labelColor=101010)
     ![Azure](https://img.shields.io/badge/Azure-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white)
 
-- **Other tools**:
+- **Otras herramientas**:
 
   ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
   ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
   ![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
   ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
-## Soft skills 😊
+## Habilidades blandas 😊
 
-- ❤️ Passion for learning and teaching
-- ⭐ Skill to adapt to different dynamics and work styles
+- ❤️ Una gran pasión por aprender y enseñar
+- ⭐ Habilidad para adaptarse a diferentes dinámicas y estilos de trabajo
+- ✨ Altas capacidades de liderazgo
 
-## Contact me! 📞
+## Contáctame 📞
 
 <p align="left">
       <br/>
