@@ -50,7 +50,4 @@
       <a href="mailto:giraldosofia481@gmail.com" target="blank"><img align="center"
          src="https://img.shields.io/badge/gmail-EA4335.svg?style=for-the-badge&logo=gmail&logoColor=white"
          alt="azzar" height="30"/></a>
-      <a href="https://twitter.com/SofiaGiraldoC" target="blank"><img align="center"
-         src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"
-         alt="azzar" height="30"/></a>
 </p>
