@@ -11,34 +11,6 @@
 
 - 📚 Focusing mainly on data science, but also have knowledge on back-end and front-end development.
 
-## Main Tools 🧰
-
-- **Programming languages**:
-
-    ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-
-- **Frameworks**:
-
-    ![Django REST Framework](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
-    ![Dash](https://img.shields.io/badge/Dash-0080FF?style=for-the-badge&logo=dash&logoColor=white)
-
-- **Cloud**:
-
-    ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white&labelColor=101010)
-    ![Azure](https://img.shields.io/badge/Azure-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white)
-
-- **Other tools**:
-
-  ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-  ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-  ![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
-  ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-
-## Soft skills 😊
-
-- ❤️ Passion for learning and teaching
-- ⭐ Skill to adapt to different dynamics and work styles
-
 ## Contact me! 📞
 
 <p align="left">
