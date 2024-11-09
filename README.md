@@ -2,15 +2,6 @@
 
 <h3 align="center">Data Scientist, Data Engineer and Backend Developer</h3>
 
-
-## About me
-
-- 🎓 I am Economist from Universidad de Medellín and at the moment Analytics student at Universidad Nacional.
-
-- 🌎 Currently living in Medellín, Colombia
-
-- 📚 Focusing mainly on data science, but also have knowledge on back-end and front-end development.
-
 ## Contact me! 📞
 
 <p align="left">
