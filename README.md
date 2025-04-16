@@ -1,4 +1,5 @@
-<h1 align="center">Hello! I am Sofía Giraldo 👋</h1>
+<h1 align="center">Hello! I am Sofía 👋</h1>
+![ysgiraldo](https://komarev.com/ghpvc/?username=ysgiraldo&color=brightgreen)
 
 <h3 align="center">Backend and Frontend Developer</h3>
 
