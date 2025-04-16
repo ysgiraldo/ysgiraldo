@@ -1,12 +1,36 @@
-Hello there! I am Sofia 👋
+<h1 align="center">Hello there! I am Sofia Giraldo 👋</h1>
 
-![ysgiraldo](https://komarev.com/ghpvc/?username=ysgiraldo&color=brightgreen)
+<h3 align="center">Data and Software Engineer</h3>
 
-Backend and Frontend Developer\
-Data engineer and IA/Quantum entusiast
+## About me 🙋‍♂️
+
+- 👨‍💼 I am currently working for Bancolombia as a SSR Data/Software Engineer.
+
+- 🎓 I am Economist from Universidad de Medellin and I've finished my specialization in Analytics at Universidad Nacional.
+
+- 📚 Focusing mainly on Back-end development, but I also have skills in Front-end, QA, Test Automation, DevOps, Data Analysis, IA.
+
+- 👨‍💻 I am an enthusiast and junior researcher in Quantum Computing.
+
+- 🌎 Currently living in Medellín, Colombia.
+
+## Languages and Tools 🧰
+
+  ![PY](https://img.shields.io/badge/Python-007ACC?style=for-the-badge&logo=python&logoColor=white)
+  ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+  ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+  ![Angular](https://img.shields.io/badge/Angular-f42165?style=for-the-badge&logo=angular&logoColor=white)
+  ![AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
+  ![Azure Devops](https://img.shields.io/badge/Azure_DevOps-0078D7?style=for-the-badge&logo=azure-devops&logoColor=white)
+  ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
+
+## Soft skills 😊
+
+- 🚀 Proactive and initiative-driven
+- ❤️ Passion for learning and teaching
+- ⭐ Skill to adapt to different dynamics and work styles
 
 ## Connect with me!
-[LinkedIn](https://www.linkedin.com/in/yackelin-sof%C3%ADa-giraldo-casta%C3%B1o/)
 
 <p align="left">
       <br/>
@@ -14,7 +38,3 @@ Data engineer and IA/Quantum entusiast
          src="https://img.shields.io/badge/linkedin-%231DA1F2.svg?style=for-the-badge&logo=linkedin&logoColor=white"
          alt="azzar" height="30"/></a>
 </p>
-
-## Languages and tools
-<img height="50px" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwebforpc.com%2Fwp-content%2Fuploads%2F2018%2F01%2Flinux-logo-image.jpg&f=1&nofb=1" />
-<img height="50px" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.digitaltveurope.com%2Ffiles%2F2019%2F02%2FAWS_logo.jpg&f=1&nofb=1" />
