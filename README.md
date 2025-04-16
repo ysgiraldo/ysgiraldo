@@ -17,9 +17,10 @@
 ## Languages and Tools 🧰
 
   ![PY](https://img.shields.io/badge/Python-007ACC?style=for-the-badge&logo=python&logoColor=white)
-  ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
   ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
   ![Angular](https://img.shields.io/badge/Angular-f42165?style=for-the-badge&logo=angular&logoColor=white)
+  ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+  ![Linux](https://img.shields.io/badge/Linux-F7DF1E?style=for-the-badge&logo=linux&logoColor=black)
   ![AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
   ![Azure Devops](https://img.shields.io/badge/Azure_DevOps-0078D7?style=for-the-badge&logo=azure-devops&logoColor=white)
 
