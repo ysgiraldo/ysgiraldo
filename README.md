@@ -2,7 +2,8 @@ Hello there! I am Sofia 👋
 
 ![ysgiraldo](https://komarev.com/ghpvc/?username=ysgiraldo&color=brightgreen)
 
-<h3 align="center">Backend and Frontend Developer</h3>
+Backend and Frontend Developer\
+Data engineer and IA/Quantum entusiast
 
 ## Connect with me!
 [LinkedIn](https://www.linkedin.com/in/yackelin-sof%C3%ADa-giraldo-casta%C3%B1o/)
