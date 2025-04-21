@@ -8,7 +8,7 @@
 
 - 🎓 I am Economist from Universidad de Medellin and I've finished my specialization in Analytics at Universidad Nacional.
 
-- 📚 Focusing mainly on Back-end development, but I also have skills in Front-end, QA, Test Automation, DevOps, Data Analysis, IA.
+- 📚 Focusing mainly on Back-end development, but I also have skills in Front-end, DevOps, Data Analysis, IA.
 
 - 👨‍💻 I am an enthusiast and junior researcher in Quantum Computing.
 
