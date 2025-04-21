@@ -2,7 +2,7 @@
 
 <h3 align="center">Data and Software Engineer</h3>
 
-## About me 🙋‍♂️
+## About me
 
 - 👨‍💼 I am currently working for Bancolombia as a SSR Data/Software Engineer.
 
@@ -14,7 +14,7 @@
 
 - 🌎 Currently living in Medellín, Colombia.
 
-## Languages and Tools 🧰
+## Languages and Tools
 
   ![PY](https://img.shields.io/badge/Python-007ACC?style=for-the-badge&logo=python&logoColor=white)
   ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=black)
@@ -26,7 +26,7 @@
   ![AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=black)
   ![Azure Devops](https://img.shields.io/badge/Azure_DevOps-0078D7?style=for-the-badge&logo=azure-devops&logoColor=white)
 
-## Soft skills 😊
+## Soft skills
 
 - 🚀 Proactive and initiative-driven
 - ❤️ Passion for learning and teaching
