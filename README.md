@@ -31,9 +31,7 @@
 - ⭐ Skill to adapt to different dynamics and work styles
 
 ## Connect with me!
-
 <p align="left">
-      <br/>
       <a href="https://www.linkedin.com/in/yackelin-sof%C3%ADa-giraldo-casta%C3%B1o/" target="blank"><img align="center"
          src="https://img.shields.io/badge/linkedin-%231DA1F2.svg?style=for-the-badge&logo=linkedin&logoColor=white"
          alt="azzar" height="30"/></a>
