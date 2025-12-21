@@ -6,8 +6,6 @@
 
 - 👨‍💼 I am currently working for Bancolombia as a SSR Software Engineer.
 
-- 🎓 I am Economist from Universidad de Medellin and I've finished my specialization in Analytics at Universidad Nacional.
-
 - 📚 Focusing mainly on Fullstack development, but I also have skills as a Data Engineer, DevOps.
 
 - 🌎 Medellín, Colombia.
@@ -31,4 +29,5 @@
          src="https://img.shields.io/badge/linkedin-%231DA1F2.svg?style=for-the-badge&logo=linkedin&logoColor=white"
          alt="azzar" height="30"/></a>
 </p>
+
 
