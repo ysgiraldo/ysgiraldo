@@ -4,15 +4,13 @@
 
 ## About me
 
-- 👨‍💼 I am currently working for Bancolombia as a SSR Data/Software Engineer.
+- 👨‍💼 I am currently working for Bancolombia as a SSR Software Engineer.
 
 - 🎓 I am Economist from Universidad de Medellin and I've finished my specialization in Analytics at Universidad Nacional.
 
-- 📚 Focusing mainly on Back-end development, but I also have skills in Front-end, DevOps, Data Analysis, IA.
+- 📚 Focusing mainly on Fullstack development, but I also have skills as a Data Engineer, DevOps.
 
-- 👨‍💻 I am an enthusiast and junior researcher in Quantum Computing.
-
-- 🌎 Currently living in Medellín, Colombia.
+- 🌎 Medellín, Colombia.
 
 ## Languages and Tools
 
@@ -25,12 +23,7 @@
   ![Spark](https://img.shields.io/badge/Spark-f42165?style=for-the-badge&logo=spark&logoColor=white)
   ![AWS](https://img.shields.io/badge/Amazon_AWS-F7DF1E?style=for-the-badge&logo=amazonaws&logoColor=black)
   ![Azure Devops](https://img.shields.io/badge/Azure_DevOps-0078D7?style=for-the-badge&logo=azure-devops&logoColor=white)
-
-## Soft skills
-
-- 🚀 Proactive and initiative-driven
-- ❤️ Passion for learning and teaching
-- ⭐ Skill to adapt to different dynamics and work styles
+  ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=amazonaws&logoColor=black)
 
 ## Connect with me!
 <p align="left">
@@ -38,3 +31,4 @@
          src="https://img.shields.io/badge/linkedin-%231DA1F2.svg?style=for-the-badge&logo=linkedin&logoColor=white"
          alt="azzar" height="30"/></a>
 </p>
+
