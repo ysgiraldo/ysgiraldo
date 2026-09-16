@@ -254,7 +254,6 @@
     <a class="brand" href="#/">SGC</a>
     <nav id="nav">
       <ul>
-        <li><a href="#/about" data-route="about">About</a></li>
         <li><a href="#/experience" data-route="experience">Experience</a></li>
         <li><a href="#/skills" data-route="skills">Education</a></li>
         <li><a href="#/projects" data-route="projects">Projects</a></li>
@@ -270,7 +269,7 @@
 
 <div class="sheet-index">
   <button id="prevBtn" aria-label="Previous page">←</button>
-  <span id="sheetLabel">SHEET 01 / 06</span>
+  <span id="sheetLabel">SHEET 01 / 05</span>
   <button id="nextBtn" aria-label="Next page">→</button>
 </div>
 
@@ -307,13 +306,6 @@ const PAGES = {
           <a class="btn btn--primary" href="#/contact">Let's talk</a>
           <a class="btn btn--ghost" href="#" download>Download CV (coming soon)</a>
         </div>
-        <ul class="quicklinks">
-          <li><a href="#/about"><span class="num">001</span><span class="lbl">About</span></a></li>
-          <li><a href="#/experience"><span class="num">002</span><span class="lbl">Experience</span></a></li>
-          <li><a href="#/skills"><span class="num">003</span><span class="lbl">Education</span></a></li>
-          <li><a href="#/projects"><span class="num">004</span><span class="lbl">Projects</span></a></li>
-          <li><a href="#/contact"><span class="num">005</span><span class="lbl">Contact</span></a></li>
-        </ul>
       </div>
       <div class="hero__visual">
         <svg class="schematic" viewBox="0 0 260 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -331,10 +323,8 @@ const PAGES = {
         </svg>
       </div>
     </div>
-  `,
 
-  about: () => `
-    <div class="wrap">
+    <div class="wrap" style="margin-top:72px;">
       <div class="callout"><span>001</span><h2>About</h2></div>
       <div class="about">
         <p>
@@ -350,6 +340,13 @@ const PAGES = {
           <li><dt>Languages</dt><dd>English, Spanish</dd></li>
         </dl>
       </div>
+
+      <ul class="quicklinks" style="margin-top:48px;">
+        <li><a href="#/experience"><span class="num">002</span><span class="lbl">Experience</span></a></li>
+        <li><a href="#/skills"><span class="num">003</span><span class="lbl">Education</span></a></li>
+        <li><a href="#/projects"><span class="num">004</span><span class="lbl">Projects</span></a></li>
+        <li><a href="#/contact"><span class="num">005</span><span class="lbl">Contact</span></a></li>
+      </ul>
     </div>
   `,
 
@@ -518,7 +515,6 @@ const PAGES = {
    ══════════════════════════════════════════════════════════════ */
 const ROUTES = [
   { path: '/',             key: 'home',       label: 'Home' },
-  { path: '/about',        key: 'about',      label: 'About' },
   { path: '/experience',   key: 'experience', label: 'Experience' },
   { path: '/skills',       key: 'skills',     label: 'Education' },
   { path: '/projects',     key: 'projects',   label: 'Projects and documents' },
@@ -615,7 +611,7 @@ termForm.addEventListener('submit', (e) => {
 
   if(cmd === 'go' && rest.length){
     const target = ROUTES.find(r => r.key.includes(rest.join(' ')) || r.label.toLowerCase().includes(rest.join(' ')));
-    printLine(target ? `Opening ${target.label} ...` : 'Couldn\'t find that page. Try: about, experience, education, projects, contact');
+    printLine(target ? `Opening ${target.label} ...` : 'Couldn\'t find that page. Try: experience, education, projects, contact');
     if(target) location.hash = '#' + target.path;
   } else if(COMMANDS[cmd]){
     const out = COMMANDS[cmd]();
