@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SGC</title>
-<meta name="description" content="Personal portfolio of Sofia Giraldo, software developer.">
+<title>Your Name — Software Developer</title>
+<meta name="description" content="Personal portfolio of Your Name, software developer.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -251,12 +251,12 @@
 
 <header>
   <div class="wrap">
-    <a class="brand" href="#/">Sofia Giraldo</a>
+    <a class="brand" href="#/">Your Name</a>
     <nav id="nav">
       <ul>
         <li><a href="#/about" data-route="about">About</a></li>
         <li><a href="#/experience" data-route="experience">Experience</a></li>
-        <li><a href="#/skills" data-route="skills">Skills</a></li>
+        <li><a href="#/skills" data-route="skills">Education</a></li>
         <li><a href="#/projects" data-route="projects">Projects</a></li>
         <li><a href="#/contact" data-route="contact">Contact</a></li>
       </ul>
@@ -266,7 +266,7 @@
 
 <main id="main" tabindex="-1"></main>
 
-<footer><div class="wrap">Sofia Giraldo — Copyright 2026</div></footer>
+<footer><div class="wrap">Your Name — Updated in 2026</div></footer>
 
 <div class="sheet-index">
   <button id="prevBtn" aria-label="Previous page">←</button>
@@ -278,7 +278,7 @@
 <div class="terminal" id="terminal" role="dialog" aria-label="Interactive console">
   <div class="terminal__bar">
     <span class="terminal__dot"></span><span class="terminal__dot"></span><span class="terminal__dot"></span>
-    <span class="terminal__title">sofiagiraldo@portfolio</span>
+    <span class="terminal__title">your-name@portfolio</span>
   </div>
   <div class="terminal__body" id="termBody">
     <p class="terminal__line">Welcome. Type <strong>help</strong> to see the available commands.</p>
@@ -297,8 +297,8 @@ const PAGES = {
   home: () => `
     <div class="wrap hero">
       <div>
-        <span class="hero__eyebrow"><!-- EDIT: your specialty -->data scientist · distributed systems</span>
-        <h1>Hello there!</h1>
+        <span class="hero__eyebrow"><!-- EDIT: your specialty -->backend development · distributed systems</span>
+        <h1>Hi, I'm Your Name.</h1>
         <p class="hero__role">
           <!-- EDIT --> I build reliable software —from APIs to the infrastructure that
           keeps them running— for teams that need things to simply work.
@@ -310,7 +310,7 @@ const PAGES = {
         <ul class="quicklinks">
           <li><a href="#/about"><span class="num">001</span><span class="lbl">About</span></a></li>
           <li><a href="#/experience"><span class="num">002</span><span class="lbl">Experience</span></a></li>
-          <li><a href="#/skills"><span class="num">003</span><span class="lbl">Skills</span></a></li>
+          <li><a href="#/skills"><span class="num">003</span><span class="lbl">Education</span></a></li>
           <li><a href="#/projects"><span class="num">004</span><span class="lbl">Projects</span></a></li>
           <li><a href="#/contact"><span class="num">005</span><span class="lbl">Contact</span></a></li>
         </ul>
@@ -378,43 +378,50 @@ const PAGES = {
             <li>Second relevant achievement.</li>
           </ul>
         </li>
-      </ol>
-    </div>
 
-    <br><br>
-
-    <div class="wrap">
-      <div class="callout"><span>002.1</span><h2>Featured</h2></div>
-      <ol class="timeline">
-        <li class="timeline__item">
-          <span class="timeline__date">2025 — Present</span>
-          <h3 class="timeline__role">Quantum Computing and IA Research</h3>
-          <p class="timeline__org">Free Time</p>
-          <p>Brief description of your role and the context of the team or product.</p>
-        </li>
-        <li class="timeline__item">
-          <span class="timeline__date">2022 — Present</span>
-          <h3 class="timeline__role">Open Source Contributor</h3>
-          <p class="timeline__org">Free Time</p>
-          <p>Brief description of your role and the context of the team or product.</p>
-        </li>
-      </ol>
+      <div class="skill-group" style="margin-top:56px;">
+        <h3>Featured — outside of work</h3>
+        <!-- EDIT: things you do in your free time that say something about you as a
+             developer or a person (open source, teaching, writing, a hobby, etc.) -->
+        <ul class="tags">
+          <li>Researcher about IA and Quantum Computing</li>
+          <li>Open source contributions</li>
+          <li>Mentoring junior devs</li>
+          <li>Photography</li>
+        </ul>
+      </div>
     </div>
   `,
 
   skills: () => `
     <div class="wrap">
-      <div class="callout"><span>003</span><h2>Skills</h2></div>
+      <div class="callout"><span>003</span><h2>Education</h2></div>
+
       <div class="skill-group">
-        <h3>Languages</h3>
+        <h3>Degrees</h3>
+        <div>
+          <div class="timeline__date">2023 - 2025</div>
+          <p class="timeline__role" style="font-size:17px;">Postgraduate Specialization in Analytics</p>
+          <p class="timeline__org" style="margin-bottom:0;">Universidad Nacional de Colombia</p>
+        </div>
+        <br>
+        <div style="margin-bottom:18px;">
+          <div class="timeline__date">2019 — 2023</div>
+          <p class="timeline__role" style="font-size:17px;">Bachelor's Degree in Economics</p>
+          <p class="timeline__org" style="margin-bottom:0;">Universidad de Medellin</p>
+        </div>
+      </div>
+
+      <div class="skill-group" style="margin-top:48px;">
+        <h3>Skills — Languages</h3>
         <ul class="tags"><li>JavaScript</li><li>TypeScript</li><li>Python</li><li>SQL</li></ul>
       </div>
       <div class="skill-group">
-        <h3>Frameworks &amp; tools</h3>
-        <ul class="tags"><li>Node.js</li><li>React</li><li>Docker</li><li>PostgreSQL</li><li>Git</li></ul>
+        <h3>Skills — Frameworks &amp; tools</h3>
+        <ul class="tags"><li>Docker</li><li>PostgreSQL</li><li>Git</li></ul>
       </div>
       <div class="skill-group">
-        <h3>Other</h3>
+        <h3>Skills — Other</h3>
         <ul class="tags"><li>API architecture</li><li>CI/CD</li><li>Testing</li></ul>
       </div>
     </div>
@@ -493,9 +500,6 @@ const PAGES = {
         Have a project in mind or just want to chat? Reach out through any of these.
       </p>
       <div class="contact__grid">
-        <a class="contact__link" href="mailto:giraldosofia481@gmail.com">
-          <span class="contact__label">Email</span><span class="contact__value">giraldosofia481@gmail.com</span>
-        </a>
         <a class="contact__link" href="https://linkedin.com/in/yackelin-sofía-giraldo-castaño/" target="_blank" rel="noopener">
           <span class="contact__label">LinkedIn</span><span class="contact__value">/in/yackelin-sofía-giraldo-castaño/</span>
         </a>
@@ -514,7 +518,7 @@ const ROUTES = [
   { path: '/',             key: 'home',       label: 'Home' },
   { path: '/about',        key: 'about',      label: 'About' },
   { path: '/experience',   key: 'experience', label: 'Experience' },
-  { path: '/skills',       key: 'skills',     label: 'Skills' },
+  { path: '/skills',       key: 'skills',     label: 'Education' },
   { path: '/projects',     key: 'projects',   label: 'Projects and documents' },
   { path: '/contact',      key: 'contact',    label: 'Contact' },
 ];
@@ -589,13 +593,14 @@ function printLine(text){
 }
 
 const COMMANDS = {
-  help: () => 'Commands: help, whoami, experience, projects, contact, cv, links, go <page>, clear',
-  whoami: () => 'Sofia Giraldo — IA and Quantum Computing enthusiast. Type "experience" to see the journey.',
+  help: () => 'Commands: help, whoami, experience, education, projects, contact, cv, links, go <page>, clear',
+  whoami: () => 'Your Name — software developer. Type "experience" to see the journey.',
   experience: () => { location.hash = '#/experience'; return 'Opening /experience ...'; },
+  education: () => { location.hash = '#/skills'; return 'Opening /education ...'; },
   projects: () => { location.hash = '#/projects'; return 'Opening /projects ...'; },
   contact: () => { location.hash = '#/contact'; return 'Opening /contact ...'; },
   cv: () => 'The CV isn\'t uploaded yet. Add the PDF and update the "Download CV" button.',
-  links: () => 'GitHub: github.com/ysgiraldo · LinkedIn: linkedin.com/in/yackelin-sofía-giraldo-castaño/',
+  links: () => 'GitHub: github.com/your-username · LinkedIn: linkedin.com/in/your-username',
   clear: () => { termBody.innerHTML=''; return null; },
 };
 
@@ -608,7 +613,7 @@ termForm.addEventListener('submit', (e) => {
 
   if(cmd === 'go' && rest.length){
     const target = ROUTES.find(r => r.key.includes(rest.join(' ')) || r.label.toLowerCase().includes(rest.join(' ')));
-    printLine(target ? `Opening ${target.label} ...` : 'Couldn\'t find that page. Try: about, experience, skills, projects, contact');
+    printLine(target ? `Opening ${target.label} ...` : 'Couldn\'t find that page. Try: about, experience, education, projects, contact');
     if(target) location.hash = '#' + target.path;
   } else if(COMMANDS[cmd]){
     const out = COMMANDS[cmd]();
