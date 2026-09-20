@@ -81,6 +81,18 @@
     height:2px; background: var(--blue);
   }
 
+  .lang-toggle{
+    display:flex; border: 1px solid var(--paper-line); border-radius: 3px; overflow:hidden;
+    font-family: "IBM Plex Mono", monospace; font-size: 12px; flex-shrink:0;
+  }
+  .lang-toggle button{
+    background:none; border:none; padding: 7px 11px; cursor:pointer; color: var(--muted);
+    font-family: inherit; font-size: inherit; transition: background-color .15s ease, color .15s ease;
+  }
+  .lang-toggle button + button{ border-left: 1px solid var(--paper-line); }
+  .lang-toggle button:hover{ color: var(--blue); }
+  .lang-toggle button.is-active{ background: var(--blue); color:#fff; }
+
   /* ---------- page shell / transitions ---------- */
   main{ min-height: calc(100vh - 64px - 60px); position: relative; }
   .page{ padding: 72px 0 96px; }
@@ -253,19 +265,18 @@
   <div class="wrap">
     <a class="brand" href="#/">SGC</a>
     <nav id="nav">
-      <ul>
-        <li><a href="#/experience" data-route="experience">Experience</a></li>
-        <li><a href="#/skills" data-route="skills">Education</a></li>
-        <li><a href="#/projects" data-route="projects">Projects</a></li>
-        <li><a href="#/contact" data-route="contact">Contact</a></li>
-      </ul>
+      <ul id="navList"></ul>
     </nav>
+    <div class="lang-toggle" id="langToggle">
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="es">ES</button>
+    </div>
   </div>
 </header>
 
 <main id="main" tabindex="-1"></main>
 
-<footer><div class="wrap">
+<footer><div class="wrap" id="footerText">
   Sofia Giraldo — Copyright 2026 <br>
   "Discipline sooner or later will defeat intelligence"
 </div></footer>
@@ -293,14 +304,17 @@
 
 <script>
 /* ══════════════════════════════════════════════════════════════
-   CONTENT — edit your real data here (look for "EDIT:")
+   CONTENT — edit your real data here. Everything is duplicated in
+   CONTENT.en and CONTENT.es so the language toggle can switch
+   instantly between both versions.
    ══════════════════════════════════════════════════════════════ */
-const PAGES = {
+const CONTENT = {
+en: {
   home: () => `
     <div class="wrap hero">
       <div>
         <span class="hero__eyebrow">data science · cloud · artificial intelligence · quantum computing</span>
-        <h1>Building data-driven solutions for complex problems.</h1>
+        <h1>Building data-driven solutions for complex problems</h1>
         <p class="hero__role">
           A Data Scientist with a background in systems engineering, analytics and
           artificial intelligence. I enjoy turning data and ideas into practical, scalable solutions.
@@ -543,23 +557,303 @@ const PAGES = {
       </div>
     </div>
   `
+}, // end CONTENT.en
+
+es: {
+  home: () => `
+    <div class="wrap hero">
+      <div>
+        <span class="hero__eyebrow">ciencia de datos · nube · inteligencia artificial · computación cuántica</span>
+        <h1>Construyendo soluciones basadas en datos para problemas complejos</h1>
+        <p class="hero__role">
+          Científica de datos con formación en ingeniería de sistemas, analítica e inteligencia
+          artificial. Disfruto convertir datos e ideas en soluciones prácticas y escalables.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#/contact">Hablemos</a>
+          <a class="btn btn--ghost" href="#" download>Descargar CV</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <svg class="schematic" viewBox="0 0 260 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M20 190 L20 60 L90 60" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M90 60 L90 20 L240 20" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M20 120 L130 120 L130 200" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M130 120 L240 120 L240 170" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M90 60 L90 160 L180 160" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="20" cy="190" r="4" fill="var(--paper)" stroke="var(--blue)" stroke-width="2"/>
+          <circle cx="90" cy="60" r="4" fill="var(--paper)" stroke="var(--blue)" stroke-width="2"/>
+          <circle cx="240" cy="20" r="4" fill="var(--paper)" stroke="var(--blue)" stroke-width="2"/>
+          <circle cx="130" cy="200" r="4" fill="var(--paper)" stroke="var(--blue)" stroke-width="2"/>
+          <circle cx="240" cy="170" r="4" fill="var(--paper)" stroke="var(--blue)" stroke-width="2"/>
+          <circle cx="180" cy="160" r="4" fill="var(--paper)" stroke="var(--blue)" stroke-width="2"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="wrap" style="margin-top:72px;">
+      <div class="callout"><span>001</span><h2>Sobre mí</h2></div>
+      <div class="about">
+        <p>
+          Soy Sofía, científica de datos interesada en la intersección entre datos, ingeniería
+          de software, tecnologías en la nube e inteligencia artificial. Mi trabajo combina el
+          pensamiento analítico con desarrollo práctico para convertir requerimientos complejos
+          en soluciones útiles.
+        </p>
+        <p>
+          También estoy explorando la computación cuántica y construyo constantemente proyectos
+          que fortalecen mis habilidades de ingeniería e investigación.
+        </p>
+        <dl class="facts">
+          <li><dt>Ubicación</dt><dd>Medellín, Colombia</dd></li>
+          <li><dt>Enfoque</dt><dd>Datos · IA · Nube · APIs · Computación cuántica</dd></li>
+          <li><dt>Idiomas</dt><dd>Inglés, Español</dd></li>
+        </dl>
+      </div>
+
+      <ul class="quicklinks" style="margin-top:48px;">
+        <li><a href="#/experience"><span class="num">002</span><span class="lbl">Experiencia</span></a></li>
+        <li><a href="#/skills"><span class="num">003</span><span class="lbl">Educación</span></a></li>
+        <li><a href="#/projects"><span class="num">004</span><span class="lbl">Proyectos</span></a></li>
+        <li><a href="#/contact"><span class="num">005</span><span class="lbl">Contacto</span></a></li>
+      </ul>
+    </div>
+  `,
+
+  experience: () => `
+    <div class="wrap">
+      <div class="callout"><span>002</span><h2>Experiencia</h2></div>
+      <ol class="timeline">
+        <li class="timeline__item">
+          <span class="timeline__date">2024 — Actualidad</span>
+          <h3 class="timeline__role">Científica de Datos</h3>
+          <p class="timeline__org">Bancolombia</p>
+          <p>
+            Trabajo enfocado en datos, que involucra analítica, automatización y soluciones
+            tecnológicas en un entorno de servicios financieros.
+          </p>
+          <ul>
+            <li>Desarrollo y soporte de soluciones analíticas usando Python, SQL y herramientas de datos.</li>
+            <li>Traducción de requerimientos de negocio en flujos de datos y automatización reproducibles.</li>
+          </ul>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__date">2023 — 2024</span>
+          <h3 class="timeline__role">Científica de Datos - Talento B</h3>
+          <p class="timeline__org">Bancolombia</p>
+          <p>
+            Experiencia inicial enfocada en análisis de datos, resolución de problemas y
+            aplicación de técnicas analíticas a necesidades de negocio.
+          </p>
+          <ul>
+            <li>Trabajo con flujos de preparación de datos, análisis y generación de reportes.</li>
+            <li>Construcción de bases técnicas en Python, SQL, analítica y tecnologías en la nube.</li>
+          </ul>
+        </li>
+
+      <div class="skill-group" style="margin-top:56px;">
+        <h3>Destacado — fuera del trabajo</h3>
+        <ul class="tags">
+          <li>Investigación en IA y computación cuántica</li>
+          <li>Proyectos técnicos personales</li>
+          <li>Aprendizaje técnico continuo</li>
+          <li>Fotografía</li>
+        </ul>
+      </div>
+    </div>
+  `,
+
+  skills: () => `
+    <div class="wrap">
+      <div class="callout"><span>003</span><h2>Educación</h2></div>
+
+      <div class="skill-group">
+        <h3>Títulos</h3>
+        <div>
+          <div class="timeline__date">2023 - 2025</div>
+          <p class="timeline__role" style="font-size:17px;">Especialización en Ingeniería de Sistemas y Computación</p>
+          <p class="timeline__org" style="margin-bottom:0;">Universidad Nacional de Colombia</p>
+        </div>
+        <br>
+        <div style="margin-bottom:18px;">
+          <div class="timeline__date">2019 — 2023</div>
+          <p class="timeline__role" style="font-size:17px;">Pregrado en Economía</p>
+          <p class="timeline__org" style="margin-bottom:0;">Universidad de Medellín</p>
+        </div>
+      </div>
+
+      <div class="skill-group" style="margin-top:48px;">
+        <h3>Habilidades — Lenguajes</h3>
+        <ul class="tags"><li>Python</li><li>SQL</li><li>Jupyter</li></ul>
+      </div>
+      <div class="skill-group">
+        <h3>Habilidades — Frameworks y herramientas</h3>
+        <ul class="tags"><li>AWS</li><li>Docker</li><li>PostgreSQL</li><li>DynamoDB</li><li>Git</li></ul>
+      </div>
+      <div class="skill-group">
+        <h3>Habilidades — Otras</h3>
+        <ul class="tags"><li>Arquitectura de APIs</li><li>CI/CD</li><li>ETL / Ingeniería de datos</li><li>IA</li></ul>
+      </div>
+    </div>
+  `,
+
+  projects: () => `
+    <div class="wrap">
+      <div class="callout"><span>004</span><h2>Proyectos y documentos</h2></div>
+      <p style="color:var(--ink-soft); max-width:58ch; margin-bottom:32px;">
+        Una selección de proyectos técnicos que muestran cómo trabajo en arquitectura en la
+        nube, ingeniería de datos y tecnologías emergentes.
+      </p>
+
+      <ul class="content-list">
+
+        <li class="content-card">
+          <span class="content-card__kind">Nube</span>
+          <div>
+            <h3 class="content-card__title">Pasarela de pagos — AWS</h3>
+            <div class="content-card__meta">
+              <span>AWS</span><span>API</span><span>Lambda</span><span>DynamoDB</span>
+            </div>
+            <p>
+              Arquitectura de pasarela de pagos serverless diseñada en torno a APIs, procesamiento
+              de transacciones, idempotencia e integraciones seguras. El proyecto explora cómo
+              estructurar una plataforma financiera con servicios de AWS manteniendo una
+              arquitectura modular y escalable.
+            </p>
+            <a class="content-card__link" href="https://github.com/ysgiraldo" target="_blank" rel="noopener">Ver perfil de GitHub →</a>
+          </div>
+        </li>
+
+        <li class="content-card">
+          <span class="content-card__kind">Datos</span>
+          <div>
+            <h3 class="content-card__title">Ingeniería de datos y DataOps</h3>
+            <div class="content-card__meta">
+              <span>Python</span><span>Ingeniería de datos</span><span>DataOps</span>
+            </div>
+            <p>
+              Un proyecto de ingeniería enfocado en flujos de datos y prácticas de DataOps,
+              conectando el procesamiento de datos con una arquitectura orientada a aplicaciones.
+            </p>
+            <a class="content-card__link" href="https://github.com/ysgiraldo/project-data-engineer" target="_blank" rel="noopener">Ver repositorio →</a>
+          </div>
+        </li>
+
+        <li class="content-card">
+          <span class="content-card__kind">Investigación</span>
+          <div>
+            <h3 class="content-card__title">Computación cuántica</h3>
+            <div class="content-card__meta">
+              <span>Jupyter Notebook</span><span>Computación cuántica</span><span>Investigación</span>
+            </div>
+            <p>
+              Investigación y experimentación personal en computación cuántica, usando notebooks
+              para explorar conceptos, algoritmos y enfoques computacionales más allá de los
+              sistemas clásicos.
+            </p>
+            <a class="content-card__link" href="https://github.com/ysgiraldo/Quantum_Computing" target="_blank" rel="noopener">Ver repositorio →</a>
+          </div>
+        </li>
+
+        <li class="content-card">
+          <span class="content-card__kind">ML</span>
+          <div>
+            <h3 class="content-card__title">Dimensión efectiva de modelos de Machine Learning</h3>
+            <div class="content-card__meta">
+              <span>Jupyter Notebook</span><span>Machine Learning</span>
+            </div>
+            <p>
+              Exploración de la dimensión efectiva en machine learning, documentando experimentos
+              y análisis técnico mediante notebooks reproducibles.
+            </p>
+            <a class="content-card__link" href="https://github.com/ysgiraldo/Effective_Dimension_of_ML" target="_blank" rel="noopener">Ver repositorio →</a>
+          </div>
+        </li>
+
+        <li class="content-card">
+          <span class="content-card__kind">Investigación</span>
+          <div>
+            <h3 class="content-card__title">Base de datos UNAL Water</h3>
+            <div class="content-card__meta">
+              <span>Jupyter Notebook</span><span>Datos</span>
+            </div>
+            <p>
+              Trabajo académico orientado a datos desarrollado alrededor de la base de datos
+              UNAL Water, presentado como un proyecto reproducible en notebook.
+            </p>
+            <a class="content-card__link" href="https://github.com/ysgiraldo/UNALWater_BD" target="_blank" rel="noopener">Ver repositorio →</a>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  `,
+
+  contact: () => `
+    <div class="wrap">
+      <div class="callout"><span>005</span><h2>Contacto</h2></div>
+      <p style="color:var(--ink-soft); max-width:56ch; margin-bottom:32px;">
+        ¿Te interesan los datos, la IA, la arquitectura en la nube o las tecnologías emergentes?
+        Conectemos.
+      </p>
+      <div class="contact__grid">
+        <a class="contact__link" href="mailto:giraldosofia481@gmail.com" target="_blank" rel="noopener">
+          <span class="contact__label">Correo</span><span class="contact__value">giraldosofia481@gmail.com</span>
+        </a>
+        <a class="contact__link" href="https://www.linkedin.com/in/yackelin-sofía-giraldo-castaño/" target="_blank" rel="noopener">
+          <span class="contact__label">LinkedIn</span><span class="contact__value">Sofia Giraldo</span>
+        </a>
+        <a class="contact__link" href="https://github.com/ysgiraldo" target="_blank" rel="noopener">
+          <span class="contact__label">GitHub</span><span class="contact__value">@ysgiraldo</span>
+        </a>
+      </div>
+    </div>
+  `
+} // end CONTENT.es
 };
 
 /* ══════════════════════════════════════════════════════════════
    ROUTER — each "page" is an entry in the ROUTES array
    ══════════════════════════════════════════════════════════════ */
 const ROUTES = [
-  { path: '/',             key: 'home',       label: 'Home' },
-  { path: '/experience',   key: 'experience', label: 'Experience' },
-  { path: '/skills',       key: 'skills',     label: 'Education' },
-  { path: '/projects',     key: 'projects',   label: 'Projects and documents' },
-  { path: '/contact',      key: 'contact',    label: 'Contact' },
+  { path: '/',             key: 'home',       label: { en: 'Home', es: 'Inicio' } },
+  { path: '/experience',   key: 'experience', label: { en: 'Experience', es: 'Experiencia' } },
+  { path: '/skills',       key: 'skills',     label: { en: 'Education', es: 'Educación' } },
+  { path: '/projects',     key: 'projects',   label: { en: 'Projects and documents', es: 'Proyectos y documentos' } },
+  { path: '/contact',      key: 'contact',    label: { en: 'Contact', es: 'Contacto' } },
 ];
+
+const FOOTER_TEXT = {
+  en: 'Sofia Giraldo — Copyright 2026 <br>"Discipline sooner or later will defeat intelligence"',
+  es: 'Sofia Giraldo — Copyright 2026 <br>"La disciplina, tarde o temprano, vencerá a la inteligencia"',
+};
+
+function getLang(){
+  try{
+    const saved = localStorage.getItem('site-lang');
+    if(saved === 'en' || saved === 'es') return saved;
+  }catch(e){}
+  return 'en';
+}
+function setLang(l){
+  try{ localStorage.setItem('site-lang', l); }catch(e){}
+}
+let lang = getLang();
 
 const mainEl = document.getElementById('main');
 const sheetLabel = document.getElementById('sheetLabel');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
+
+const navList = document.getElementById('navList');
+const footerText = document.getElementById('footerText');
+const langToggle = document.getElementById('langToggle');
+
+const SHEET_WORD = { en: 'SHEET', es: 'HOJA' };
+const PAGE_ARIA = {
+  en: { prev: 'Previous page', next: 'Next page' },
+  es: { prev: 'Página anterior', next: 'Página siguiente' },
+};
 
 function currentIndex(){
   const hash = location.hash.replace('#','') || '/';
@@ -567,10 +861,20 @@ function currentIndex(){
   return idx === -1 ? 0 : idx;
 }
 
+function renderNav(){
+  navList.innerHTML = ROUTES.filter(r => r.key !== 'home').map(r =>
+    `<li><a href="#${r.path}" data-route="${r.key}">${r.label[lang]}</a></li>`
+  ).join('');
+}
+
 function render(){
   const idx = currentIndex();
   const route = ROUTES[idx];
+  const PAGES = CONTENT[lang];
   const html = PAGES[route.key]();
+
+  document.documentElement.lang = lang;
+  renderNav();
 
   mainEl.innerHTML = `<div class="page is-entering">${html}</div>`;
   mainEl.focus();
@@ -579,12 +883,34 @@ function render(){
     a.classList.toggle('is-active', a.dataset.route === route.key);
   });
 
-  sheetLabel.textContent = `SHEET ${String(idx+1).padStart(2,'0')} / ${String(ROUTES.length).padStart(2,'0')}`;
-  prevBtn.disabled = idx === 0;
-  nextBtn.disabled = idx === ROUTES.length - 1;
+  document.querySelectorAll('.lang-toggle button').forEach(b=>{
+    b.classList.toggle('is-active', b.dataset.lang === lang);
+  });
+
+  if(footerText) footerText.innerHTML = FOOTER_TEXT[lang];
+
+  if(sheetLabel){
+    sheetLabel.textContent = `${SHEET_WORD[lang]} ${String(idx+1).padStart(2,'0')} / ${String(ROUTES.length).padStart(2,'0')}`;
+  }
+  if(prevBtn){
+    prevBtn.disabled = idx === 0;
+    prevBtn.setAttribute('aria-label', PAGE_ARIA[lang].prev);
+  }
+  if(nextBtn){
+    nextBtn.disabled = idx === ROUTES.length - 1;
+    nextBtn.setAttribute('aria-label', PAGE_ARIA[lang].next);
+  }
 
   window.scrollTo(0, 0);
 }
+
+langToggle.addEventListener('click', (e) => {
+  const btn = e.target.closest('button[data-lang]');
+  if(!btn || btn.dataset.lang === lang) return;
+  lang = btn.dataset.lang;
+  setLang(lang);
+  render();
+});
 
 window.addEventListener('hashchange', render);
 window.addEventListener('DOMContentLoaded', () => {
@@ -592,20 +918,25 @@ window.addEventListener('DOMContentLoaded', () => {
   render();
 });
 
-prevBtn.addEventListener('click', () => {
-  const idx = currentIndex();
-  if(idx > 0) location.hash = '#' + ROUTES[idx-1].path;
-});
-nextBtn.addEventListener('click', () => {
-  const idx = currentIndex();
-  if(idx < ROUTES.length - 1) location.hash = '#' + ROUTES[idx+1].path;
-});
+if(prevBtn){
+  prevBtn.addEventListener('click', () => {
+    const idx = currentIndex();
+    if(idx > 0) location.hash = '#' + ROUTES[idx-1].path;
+  });
+}
+if(nextBtn){
+  nextBtn.addEventListener('click', () => {
+    const idx = currentIndex();
+    if(idx < ROUTES.length - 1) location.hash = '#' + ROUTES[idx+1].path;
+  });
+}
 
 window.addEventListener('keydown', (e) => {
   const tag = document.activeElement.tagName;
   if(tag === 'INPUT' || tag === 'TEXTAREA') return;
-  if(e.key === 'ArrowRight' && !nextBtn.disabled) nextBtn.click();
-  if(e.key === 'ArrowLeft' && !prevBtn.disabled) prevBtn.click();
+  const idx = currentIndex();
+  if(e.key === 'ArrowRight' && idx < ROUTES.length - 1) location.hash = '#' + ROUTES[idx+1].path;
+  if(e.key === 'ArrowLeft' && idx > 0) location.hash = '#' + ROUTES[idx-1].path;
 });
 
 /* ══════════════════════════════════════════════════════════════
@@ -645,8 +976,11 @@ termForm.addEventListener('submit', (e) => {
   const [cmd, ...rest] = raw.toLowerCase().split(' ');
 
   if(cmd === 'go' && rest.length){
-    const target = ROUTES.find(r => r.key.includes(rest.join(' ')) || r.label.toLowerCase().includes(rest.join(' ')));
-    printLine(target ? `Opening ${target.label} ...` : 'Couldn\'t find that page. Try: experience, education, projects, contact');
+    const q = rest.join(' ');
+    const target = ROUTES.find(r =>
+      r.key.includes(q) || r.label.en.toLowerCase().includes(q) || r.label.es.toLowerCase().includes(q)
+    );
+    printLine(target ? `Opening ${target.label.en} ...` : 'Couldn\'t find that page. Try: experience, education, projects, contact');
     if(target) location.hash = '#' + target.path;
   } else if(COMMANDS[cmd]){
     const out = COMMANDS[cmd]();
